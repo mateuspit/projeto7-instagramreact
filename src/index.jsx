@@ -1,13 +1,13 @@
 import ReactDOM from 'react-dom'
 
-function Top(){
+function NavBar(){
     return(
         <header>
             <div class="header-container">
                 <div class="logos">
                     <ion-icon class="logo-icon"name="logo-instagram"></ion-icon>
                     <div class="bar"></div>
-                    <img src="./img/logo.png" alt="" />
+                    <img src="./assets/logo.png" alt="" />
                 </div>
                 <input type="text" placeholder="Pesquisar"/>
                 <div class="top-menu">
@@ -25,7 +25,7 @@ function Story(){
     return(
         <div class="story">
             <div class="story-img">
-                <img src="./img/9gag 1.png" alt=""/>                
+                <img src="./assets/9gag 1.png" alt=""/>                
             </div>
             <div class="story-title">
                 9 gag
@@ -64,7 +64,7 @@ function Post(){
         <div class="post">
             <div class="post-header">
                 <div class="post-user-data">
-                    <img src="./img/meowed 1.png" alt="" width="100px"/>
+                    <img src="./assets/meowed 1.png" alt="" width="100px"/>
                     meowed
                 </div>  
                 <div class="post-options">
@@ -72,7 +72,7 @@ function Post(){
                 </div>             
             </div>
             <div class="post-photo">
-                <img src="./img/gato-telefone 1.png" alt="" width="100px"/>
+                <img src="./assets/gato-telefone 1.png" alt="" width="100px"/>
             </div>
             <div class="post-buttons">
                 <div class="post-left-buttons">
@@ -85,7 +85,7 @@ function Post(){
                 </div>
             </div>
             <div class="post-stats">
-                <img src="./img/respondeai 1.png" alt="" width="100px"/>
+                <img src="./assets/respondeai 1.png" alt="" width="100px"/>
                 <p>Curtido por <span> respondeai </span> e <span> outras 9999 pessoas </span></p>           
             </div>
         </div>
@@ -101,11 +101,11 @@ function Content(){
     );
 }
 
-function TopSideMenu(){
+function Usuario(){
     return(
         <div class="top-side-menu">
             <div class="top-side-menu-img">
-                <img src="./img/catanacomics 1.png" alt="" width="100px"/>
+                <img src="./assets/catanacomics 1.png" alt="" width="100px"/>
             </div>
             <div class="top-side-menu-user">
                 catanacomics
@@ -128,12 +128,12 @@ function TopSuggestions(){
     );
 }
 
-function Suggestion(){
+function Sugestao(){
     return(
         <div class="suggestion">
             <div class="suggestion-infos">
                 <div class="suggestion-img">
-                    <img src="./img/badvibesmemes 1.png" alt="" width="100px"/>
+                    <img src="./assets/badvibesmemes 1.png" alt="" width="100px"/>
                 </div>
                 <div class="suggestion-stats">
                     <div class="suggestion-user">
@@ -151,15 +151,15 @@ function Suggestion(){
     );
 }
 
-function Suggestions(){
+function Sugestoes(){
     return(
         <div class="suggestions">
             <TopSuggestions/>
-            <Suggestion/>
-            <Suggestion/>
-            <Suggestion/>
-            <Suggestion/>
-            <Suggestion/>
+            <Sugestao/>
+            <Sugestao/>
+            <Sugestao/>
+            <Sugestao/>
+            <Sugestao/>
         </div>
     );
 }
@@ -181,8 +181,8 @@ function SideMenu(){
     return(
         <div class="side-menu-container">
             <div class="side-menu">
-                <TopSideMenu/>
-                <Suggestions/>
+                <Usuario/>
+                <Sugestoes/>
                 <FooterSideMenu/>
             </div>
         </div>        
@@ -201,7 +201,7 @@ function PrincipalContainer(){
 function App(){
     return(
         <div class="site">
-            <Top/>
+            <NavBar/>
             <div class="top-container-bar"></div>
             <PrincipalContainer/>
         </div>
