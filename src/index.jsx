@@ -3,17 +3,20 @@ import ReactDOM from 'react-dom'
 function Top(){
     return(
         <header>
-            <div class="logos">
-                <ion-icon name="logo-instagram"></ion-icon>
-                <img src="./img/logo.png" alt="" width="100px"/>
+            <div class="header-container">
+                <div class="logos">
+                    <ion-icon class="logo-icon"name="logo-instagram"></ion-icon>
+                    <div class="bar"></div>
+                    <img src="./img/logo.png" alt="" />
+                </div>
+                <input type="text" placeholder="Pesquisar"/>
+                <div class="top-menu">
+                    <ion-icon name="paper-plane-outline"></ion-icon>
+                    <ion-icon name="compass-outline"></ion-icon>
+                    <ion-icon name="compass-outline"></ion-icon>
+                    <ion-icon name="person-outline"></ion-icon>
+                </div> 
             </div>
-            <input type="text" placeholder="Pesquisa"/>
-            <div class="top-menu">
-                <ion-icon name="paper-plane-outline"></ion-icon>
-                <ion-icon name="compass-outline"></ion-icon>
-                <ion-icon name="compass-outline"></ion-icon>
-                <ion-icon name="person-outline"></ion-icon>
-            </div> 
         </header>
     );
 }
@@ -22,7 +25,7 @@ function Story(){
     return(
         <div class="story">
             <div class="story-img">
-                <img src="./img/9gag 1.png" alt="" width="50px"/>                
+                <img src="./img/9gag 1.png" alt=""/>                
             </div>
             <div class="story-title">
                 9 gag
@@ -69,7 +72,6 @@ function Post(){
                 </div>             
             </div>
             <div class="post-photo">
-                <ion-icon name="ellipsis-horizontal"></ion-icon>
                 <img src="./img/gato-telefone 1.png" alt="" width="100px"/>
             </div>
             <div class="post-buttons">
@@ -84,7 +86,7 @@ function Post(){
             </div>
             <div class="post-stats">
                 <img src="./img/respondeai 1.png" alt="" width="100px"/>
-                Curtido por <span>respondeai</span> e <span>outras 9999 pessoas</span>           
+                <p>Curtido por <span> respondeai </span> e <span> outras 9999 pessoas </span></p>           
             </div>
         </div>
     );
@@ -127,24 +129,26 @@ function TopSuggestions(){
 }
 
 function Suggestion(){
-    <div class="suggestion">
-        <div class="suggestion-infos">
-            <div class="suggestion-img">
-                <img src="./img/badvibesmemes 1.png" alt="" width="100px"/>
+    return(
+        <div class="suggestion">
+            <div class="suggestion-infos">
+                <div class="suggestion-img">
+                    <img src="./img/badvibesmemes 1.png" alt="" width="100px"/>
+                </div>
+                <div class="suggestion-stats">
+                    <div class="suggestion-user">
+                        bad.vibes.memes
+                    </div>
+                    <div class="suggestion-status">
+                        Segue você
+                    </div>
+                </div>
             </div>
-            <div class="suggestion-stats">
-                <div class="suggestion-user">
-                    bad.vibes.memes
-                </div>
-                <div class="suggestion-status">
-                    Segue você
-                </div>
+            <div class="suggestion-button">
+                Seguir
             </div>
         </div>
-        <div class="suggestion-button">
-            Seguir
-        </div>
-    </div>
+    );
 }
 
 function Suggestions(){
@@ -175,10 +179,12 @@ function FooterSideMenu(){
 
 function SideMenu(){
     return(
-        <div class="side-menu">
-            <TopSideMenu/>
-            <Suggestions/>
-            <FooterSideMenu/>
+        <div class="side-menu-container">
+            <div class="side-menu">
+                <TopSideMenu/>
+                <Suggestions/>
+                <FooterSideMenu/>
+            </div>
         </div>        
     );
 }
@@ -196,6 +202,7 @@ function App(){
     return(
         <div class="site">
             <Top/>
+            <div class="top-container-bar"></div>
             <PrincipalContainer/>
         </div>
     );
