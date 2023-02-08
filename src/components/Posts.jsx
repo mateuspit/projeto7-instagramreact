@@ -30,15 +30,16 @@ const postsStatic = [
 export default function Posts(){
     return(
         <div class="posts">
-            <Post imageUser={postsStatic[0].imageUser} title={postsStatic[0].title}
-            photo={postsStatic[0].photo} whoLikeIcon={postsStatic[0].whoLikeIcon}
-            whoLikeUser={postsStatic[0].whoLikeUser} likes={postsStatic[0].likes}  />
-            <Post imageUser={postsStatic[1].imageUser} title={postsStatic[1].title}
-            photo={postsStatic[1].photo} whoLikeIcon={postsStatic[1].whoLikeIcon}
-            whoLikeUser={postsStatic[1].whoLikeUser} likes={postsStatic[1].likes}  />
-            <Post imageUser={postsStatic[0].imageUser} title={postsStatic[0].title}
-            photo={postsStatic[0].photo} whoLikeIcon={postsStatic[0].whoLikeIcon}
-            whoLikeUser={postsStatic[0].whoLikeUser} likes={postsStatic[0].likes}  />
+            {postsStatic.map(elementoPostStatic => (
+                <Post 
+                    imageUser={elementoPostStatic.imageUser}
+                    title={elementoPostStatic.title}
+                    photo={elementoPostStatic.photo}
+                    whoLikeIcon={elementoPostStatic.whoLikeIcon}
+                    whoLikeUser={elementoPostStatic.whoLikeUser}
+                    likes={elementoPostStatic.likes}                
+                />      
+            ))}        
         </div>
     );
 }

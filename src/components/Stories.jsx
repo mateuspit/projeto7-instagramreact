@@ -38,14 +38,13 @@ const storiesStatic = [
 export default function Stories(){
     return(
         <div class="stories-container">
-            <Story image={storiesStatic[0].image} title={storiesStatic[0].title}/>
-            <Story image={storiesStatic[1].image} title={storiesStatic[1].title}/>
-            <Story image={storiesStatic[2].image} title={storiesStatic[2].title}/>
-            <Story image={storiesStatic[3].image} title={storiesStatic[3].title}/>
-            <Story image={storiesStatic[4].image} title={storiesStatic[4].title}/>
-            <Story image={storiesStatic[5].image} title={storiesStatic[5].title}/>
-            <Story image={storiesStatic[6].image} title={storiesStatic[6].title}/>
-            <Story image={storiesStatic[7].image} title={storiesStatic[7].title}/>
+
+            {storiesStatic.map(elementoStoriesStatic => (
+                <Story
+                    image={elementoStoriesStatic.image}
+                    title={elementoStoriesStatic.title}                
+                />
+            ))}
         </div>
     );
 }
