@@ -51,8 +51,9 @@ header{
     align-items: center;
     background-size: 66px;
     border-radius: 33px;
-    margin-left: 14px;
-    background-image: url(/img/stories_background.jpg);
+    /* margin-right: 14px; */
+    background-image: url(/assets/stories_background.jpg);
+    /* background-color: aqua; */
 }
 .story{
     /* overflow: hidden; */
@@ -60,6 +61,7 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-right: 14px;
 }
 
 .content{
@@ -185,7 +187,8 @@ span{
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     font-weight: 400;
-    color: var(--almost-sugg-font);     
+    color: var(--almost-sugg-font);  
+    margin-top:6px;   
 }
 
 .suggestion-user{
@@ -299,6 +302,10 @@ span{
     font-size: 12px;
     font-weight: 400;
     color: var(--almost-blac-font);
+    /* width: 100%; */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .top-container-bar{
