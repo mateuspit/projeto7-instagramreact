@@ -6,7 +6,7 @@ export default function Story(props){
                 <img src={props.image} alt=""/>                
             </div>
             <div class="story-title">
-            {props.title}
+                {props.title}
             </div>
         </div>
     );

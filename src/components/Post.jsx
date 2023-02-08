@@ -1,17 +1,23 @@
-export default function Post(){
+export default function Post(props){
     return(
+        // imageUser : "./assets/meowed 1.png",
+        // title : "meowed",
+        // photo: "./assets/gato-telefone 1.png",
+        // whoLikeIcon: "./assets/respondeai 1.png",
+        // whoLikeUser: "respondeai",
+        // likes: "101523"
         <div class="post">
             <div class="post-header">
                 <div class="post-user-data">
-                    <img src="./assets/meowed 1.png" alt="" width="100px"/>
-                    meowed
+                    <img src={props.imageUser} alt="" width="100px"/>
+                    {props.title}
                 </div>  
                 <div class="post-options">
                     <ion-icon name="ellipsis-horizontal"></ion-icon>                    
                 </div>             
             </div>
             <div class="post-photo">
-                <img src="./assets/gato-telefone 1.png" alt="" width="100px"/>
+                <img src={props.photo} alt="" width="100px"/>
             </div>
             <div class="post-buttons">
                 <div class="post-left-buttons">
@@ -24,8 +30,8 @@ export default function Post(){
                 </div>
             </div>
             <div class="post-stats">
-                <img src="./assets/respondeai 1.png" alt="" width="100px"/>
-                <p>Curtido por <span> respondeai </span> e <span> outras 9999 pessoas </span></p>           
+                <img src={props.whoLikeIcon}  alt="" width="100px"/>
+                <p>Curtido por <span> {props.whoLikeUser}  </span> e <span> outras {props.likes}  pessoas </span></p>           
             </div>
         </div>
     );
