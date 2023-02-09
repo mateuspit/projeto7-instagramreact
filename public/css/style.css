@@ -55,6 +55,65 @@ header{
     background-image: url(/assets/stories_background.jpg);
     /* background-color: aqua; */
 }
+
+.bookmark{
+    color: white;
+}
+
+.heart-outline{
+    color: red;
+}
+
+
+.like-heart{
+    position: absolute;
+    top: 243px;
+    right: 243px;
+    font-size: 151px;
+    color: white;
+    visibility: hidden;
+    animation: grow 800ms linear;
+}
+
+@keyframes grow {
+    0% {
+      transform: scale(0.5);
+      display: flex;
+      visibility: visible;
+    }
+    37.5% {
+      transform: scale(1.5);
+      opacity: 1;
+      visibility: visible;
+    }
+    100%{
+        transform: scale(1.5);
+        opacity: 0;
+        visibility: visible;
+    }
+  }
+
+
+
+
+/* .like-heart-grown{
+    transform: scale(1.5);
+    transition-property: transform 300ms;
+}
+
+.like-heart-disapear:hover{
+    transform: scale(0);
+    transition-property: transform 500ms;
+} */
+
+
+
+
+
+.chanceUserName, .post-right-button, .likeButton{
+    cursor: pointer;
+}
+
 .story{
     /* overflow: hidden; */
     display: flex;
@@ -95,6 +154,10 @@ header input{
     align-items: center;
 }
 
+.post-left-buttons{
+    display: flex;
+}
+
 .post-header{
     display: flex;
     justify-content: space-between;
@@ -117,6 +180,10 @@ header input{
 .post-photo img{
     width: 610px;
     height: 612px;
+}
+
+.post-photo{
+    position: relative;
 }
 
 .post-left-buttons ion-icon{
@@ -236,6 +303,7 @@ span{
 .top-side-menu-img img{
     width: 56px;
     margin-right: 17px;
+    cursor: pointer;
 }
 
 .top-side-menu{
@@ -298,6 +366,7 @@ span{
 }
 
 .story-title{
+    margin-top: 7px;
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     font-weight: 400;
