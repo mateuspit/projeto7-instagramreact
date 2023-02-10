@@ -88,7 +88,7 @@ export default function Post(props){
             </div>
             <div class="post-stats">
                 <img src={props.whoLikeIcon}  alt="" width="100px"/>
-                <p data-test="likes-number" >Curtido por <span> {props.whoLikeUser}  </span> e <span> outras {likePostNumber}  pessoas </span></p>           
+                <p  >Curtido por <span> {props.whoLikeUser}  </span> e <span data-test="likes-number"> outras {likePostNumber}  pessoas </span></p>           
             </div>
         </div>
     );
