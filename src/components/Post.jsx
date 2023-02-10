@@ -35,9 +35,8 @@ export default function Post(props){
     }
 
     function doubleClickLike(){
-        document.querySelector(".like-heart").classList.add("like-heart");
-        if(likePostMode === "heart-outline"){
-            likePostMode = "heart";
+        if(likePostButtonMode === "heart-outline"){
+            setLikePostButtonMode("heart");
         }             
     }
     return(
