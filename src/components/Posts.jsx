@@ -7,7 +7,7 @@ const postsStatic = [
         photo: "./assets/gato-telefone 1.png",
         whoLikeIcon: "./assets/respondeai 1.png",
         whoLikeUser: "respondeai",
-        likes: "101523"
+        likes: 101523
     },
     {
         imageUser : "./assets/barked 2.png",
@@ -15,7 +15,7 @@ const postsStatic = [
         photo: "./assets/dog 1.png",
         whoLikeIcon: "./assets/adorableanimals 2.png",
         whoLikeUser: "adorableanimals",
-        likes: "99159"
+        likes: 99159
     },
     {
         imageUser : "./assets/meowed 1.png",
@@ -23,7 +23,7 @@ const postsStatic = [
         photo: "./assets/gato-telefone 1.png",
         whoLikeIcon: "./assets/respondeai 1.png",
         whoLikeUser: "respondeai",
-        likes: "101523"
+        likes: 101523
     }
 ]
 
