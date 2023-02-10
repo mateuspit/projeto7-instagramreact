@@ -78,7 +78,7 @@ export default function Post(props){
             </div>
             <div class="post-buttons">
                 <div class="post-left-buttons">
-                    <div data-test="like-post" class={likePostButtonStyle}><ion-icon onClick={likePost} name={likePostButtonMode}></ion-icon></div>
+                    <div  class={likePostButtonStyle}><ion-icon data-test="like-post" onClick={likePost} name={likePostButtonMode}></ion-icon></div>
                     <ion-icon name="chatbubble-outline"></ion-icon>
                     <ion-icon name="paper-plane-outline"></ion-icon>
                 </div>
