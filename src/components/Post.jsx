@@ -60,7 +60,7 @@ export default function Post(props){
         // whoLikeIcon: "./assets/respondeai 1.png",
         // whoLikeUser: "respondeai",
         // likes: "101523"
-        <div class="post">
+        <div data-test="post" class="post">
             <div class="post-header">
                 <div class="post-user-data">
                     <img src={props.imageUser} alt="" width="100px"/>
@@ -71,24 +71,24 @@ export default function Post(props){
                 </div>             
             </div>
             <div class="post-photo">
-                <img onDoubleClick={doubleClickLike} src={props.photo} alt="" width="100px"/>
+                <img data-test="post-image" onDoubleClick={doubleClickLike} src={props.photo} alt="" width="100px"/>
                 <div class={animationHeart}>
                     <ion-icon name="heart"></ion-icon>                                        
                 </div>
             </div>
             <div class="post-buttons">
                 <div class="post-left-buttons">
-                    <div class={likePostButtonStyle}><ion-icon onClick={likePost} name={likePostButtonMode}></ion-icon></div>
+                    <div data-test="like-post" class={likePostButtonStyle}><ion-icon onClick={likePost} name={likePostButtonMode}></ion-icon></div>
                     <ion-icon name="chatbubble-outline"></ion-icon>
                     <ion-icon name="paper-plane-outline"></ion-icon>
                 </div>
                 <div class="post-right-button">
-                    <ion-icon onClick={savePost} name={savePostButtonMode}></ion-icon>                   
+                    <ion-icon data-test="save-post" onClick={savePost} name={savePostButtonMode}></ion-icon>                   
                 </div>
             </div>
             <div class="post-stats">
                 <img src={props.whoLikeIcon}  alt="" width="100px"/>
-                <p>Curtido por <span> {props.whoLikeUser}  </span> e <span> outras {likePostNumber}  pessoas </span></p>           
+                <p data-test="likes-number" >Curtido por <span> {props.whoLikeUser}  </span> e <span> outras {likePostNumber}  pessoas </span></p>           
             </div>
         </div>
     );
