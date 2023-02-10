@@ -1,16 +1,21 @@
+import React from "react"
+
 export default function Post(props){
 
-    let savePostMode = "bookmark-outline";
+    const [savePostButtonMode, setSavePostButtonMode] = React.useState("bookmark-outline");
+    const [likePostButtonMode, setLikePostButtonMode] = React.useState("heart-outline");
+
+    // let savePostMode = "bookmark-outline";
     let likePostMode = "heart-outline";
 
     function savePost(){
         //<ion-icon name="bookmark"></ion-icon>
         // alert("post");
-        if(savePostMode === "bookmark-outline"){
-            savePostMode = "bookmark";
+        if(savePostButtonMode === "bookmark-outline"){
+            setSavePostButtonMode("bookmark");
         }
-        else if (savePostMode === "bookmark"){
-            savePostMode = "bookmark-outline";
+        else if (savePostButtonMode === "bookmark"){
+            setSavePostButtonMode("bookmark-outline");
         }
         // {savePostMode === "bookmark" ? "bookmark-outline" : "bookmark" }
     }
@@ -18,12 +23,12 @@ export default function Post(props){
     function likePost(){
         //<ion-icon name="heart"></ion-icon>
         // alert("coração");
-        if(likePostMode === "heart-outline"){
-            likePostMode = "heart";
+        if(likePostButtonMode === "heart-outline"){
+            setLikePostButtonMode("heart");
             props.likes = props.likes + 1;
         }
-        else if (likePostMode === "heart"){
-            likePostMode = "heart-outline";
+        else if (likePostButtonMode === "heart"){
+            setLikePostButtonMode("heart-outline");
             props.likes = props.likes - 1;
         }
         // {likePostMode === "heart" ? "heart-outline" : "heart" }
@@ -60,12 +65,12 @@ export default function Post(props){
             </div>
             <div class="post-buttons">
                 <div class="post-left-buttons">
-                    <div class="likeButton"><ion-icon onClick={likePost} name={likePostMode}></ion-icon></div>
+                    <div class="likeButton"><ion-icon onClick={likePost} name={likePostButtonMode}></ion-icon></div>
                     <ion-icon name="chatbubble-outline"></ion-icon>
                     <ion-icon name="paper-plane-outline"></ion-icon>
                 </div>
                 <div class="post-right-button">
-                    <ion-icon onClick={savePost} name={savePostMode}></ion-icon>                   
+                    <ion-icon onClick={savePost} name={savePostButtonMode}></ion-icon>                   
                 </div>
             </div>
             <div class="post-stats">
