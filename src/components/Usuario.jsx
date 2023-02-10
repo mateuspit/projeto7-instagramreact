@@ -2,7 +2,8 @@ import React from "react"
 
 export default function Usuario(){
 
-    const [userName ,setUserName] = React.useState("catanacomics")
+    const [userName ,setUserName] = React.useState("catanacomics");
+    const [userIcon ,setUserIcon] = React.useState("./assets/catanacomics 1.png");
 
 
     function chanceUserName(){
@@ -14,14 +15,12 @@ export default function Usuario(){
     }
 
     function chanceUserIcon(){
-        let userIcon = prompt("Por favor, insira uma URL de uma imagem");
-        while(userIcon === "" || userIcon === null || userIcon === undefined){
-            userIcon = prompt("Por favor, insira uma URL valida!");
+        let userIconFunction = prompt("Por favor, insira uma URL de uma imagem");
+        while(userIconFunction === "" || userIconFunction === null || userIconFunction === undefined){
+            userIconFunction = prompt("Por favor, insira uma URL valida!");
         }        
-    }
-    
-
-    let userIcon = "./assets/catanacomics 1.png";
+        setUserIcon(userIconFunction);
+    }    
             
 
     return(
