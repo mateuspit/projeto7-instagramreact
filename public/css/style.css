@@ -62,6 +62,7 @@ header{
 
 .heart-outline{
     color: red;
+    cursor: pointer;
 }
 
 .none{
@@ -119,10 +120,12 @@ header{
 
 .likeButtonFullHeart{
     color: red;
+    cursor: pointer;
 }
 
 .likeButtonOutlineHeart{
     color: black;
+    cursor: pointer;
 }
 
 .story{
