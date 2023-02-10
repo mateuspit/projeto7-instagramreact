@@ -6,7 +6,7 @@ export default function Post(props){
     const [likePostButtonMode, setLikePostButtonMode] = React.useState("heart-outline");
 
     // let savePostMode = "bookmark-outline";
-    let likePostMode = "heart-outline";
+    // let likePostMode = "heart-outline";
 
     function savePost(){
         //<ion-icon name="bookmark"></ion-icon>

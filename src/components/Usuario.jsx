@@ -1,24 +1,26 @@
+import React from "react"
+
 export default function Usuario(){
+
+    const [userName ,setUserName] = React.useState("catanacomics")
 
 
     function chanceUserName(){
-        let userName = prompt("Por favor, insira o nome de usuario");
-        // let userName = "Mateus";
-        while(userName === "" || userName === null || userName === undefined){
-            userName = prompt("Por favor, insira um nome válido!");
-        }        
+        let userNameFunction = prompt("Por favor, insira o nome de usuario");
+        while(userNameFunction === "" || userNameFunction === null || userNameFunction === undefined){
+            userNameFunction = prompt("Por favor, insira um nome válido!");
+        }
+        setUserName(userNameFunction);
     }
 
     function chanceUserIcon(){
         let userIcon = prompt("Por favor, insira uma URL de uma imagem");
-        // let userName = "Mateus";
         while(userIcon === "" || userIcon === null || userIcon === undefined){
             userIcon = prompt("Por favor, insira uma URL valida!");
         }        
     }
     
 
-    let userName = "catanacomics";
     let userIcon = "./assets/catanacomics 1.png";
             
 
@@ -28,7 +30,7 @@ export default function Usuario(){
                 <img onClick={chanceUserIcon} src={userIcon} alt="" width="100px"/>
             </div>
             <div class="top-side-menu-user">
-                {(userName !== false) && (userName !== "") ? userName : "catanacomics"}
+                {userName}
             </div>
             <ion-icon class="chanceUserName" onClick={chanceUserName} name="pencil-outline"></ion-icon>
         </div>
