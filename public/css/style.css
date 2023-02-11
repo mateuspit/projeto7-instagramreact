@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: #FAFAFA;
+}
+
 :root{
     --borders-gray: #dbdbdb;
     --borders-light-gray: #fafafa;
