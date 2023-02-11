@@ -29,7 +29,7 @@ const suggestionsStatic = [
         title: "smallcutecats",
         followSatus: followYouStatus
     },
-]
+];
 
 export default function Sugestoes() {
     return (

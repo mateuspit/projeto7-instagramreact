@@ -41,9 +41,9 @@ export default function Stories(){
             <img id="malditaSeta"src="./assets/chevron-forward-circle 1.png" alt="Maldita Seta"></img>
             {storiesStatic.map(elementoStoriesStatic => (
                 <Story
-                    key={elementoStoriesStatic.title} 
+                    key={elementoStoriesStatic.title}
                     image={elementoStoriesStatic.image}
-                    title={elementoStoriesStatic.title}                
+                    title={elementoStoriesStatic.title}
                 />
             ))}
         </div>

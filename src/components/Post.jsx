@@ -17,7 +17,7 @@ export default function Post(props) {
         } else if (savePostButtonMode === "bookmark") {
             setSavePostButtonMode(bookmarkOutline);
         }
-    }
+    };
 
     function likePost() {
         if (likePostButtonMode === heartOutline) {
@@ -31,7 +31,7 @@ export default function Post(props) {
             likePostNumber = props.likes;
             setLikePostNumber(likePostNumber);
         }
-    }
+    };
 
     function doubleClickLike() {
         if (likePostButtonMode === heartOutline) {
@@ -42,7 +42,7 @@ export default function Post(props) {
         }
         setAnimationHeart("like-heart");
         setTimeout(() => { setAnimationHeart("none") }, animationClearTime);
-    }
+    };
     if (props.photo.includes("mp4")) {
         return (
             <>

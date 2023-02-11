@@ -24,7 +24,7 @@ const postsStaticData = [
         title: "Socrates",
         photo: "./assets/socratesquote.jpg",
         whoLikeIcon: "./assets/Plato-icon.png",
-        whoLikeUser: "platao",        
+        whoLikeUser: "platao",
         likes: 7159101523,
         authorPost: "Socrates",
         subtitle: "Você matou a sua capacidade de pensar num nível que seu cérebro não consegue enxergar a contradição daquilo que sai da sua própria boca. ",
@@ -67,7 +67,7 @@ const postsStaticData = [
         comment2: "SEMPRE ELEEEE! 🔥 ",
         postTime: "Há 1 semana"
     }
-]
+];
 
 export default function Posts() {
     return (
@@ -82,7 +82,6 @@ export default function Posts() {
                         whoLikeIcon={elementoPostStatic.whoLikeIcon}
                         whoLikeUser={elementoPostStatic.whoLikeUser}
                         likes={elementoPostStatic.likes}
-                        
                     />
                     <Comentarios
                         // key={elementoPostStatic.postTime}
@@ -96,7 +95,7 @@ export default function Posts() {
                         postTime={elementoPostStatic.postTime}
                     />
                     <PublishCommentArea
-                        // key={elementoPostStatic.comment2}
+                    // key={elementoPostStatic.comment2}
                     />
                 </div >
             ))}

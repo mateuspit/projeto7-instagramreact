@@ -10,10 +10,10 @@ export default function Sugestao(props){
                 </div>
                 <div className="suggestion-stats">
                     <div className="suggestion-user">
-                    {props.title} 
+                    {props.title}
                     </div>
                     <div className="suggestion-status">
-                    {props.followSatus} 
+                    {props.followSatus}
                     </div>
                 </div>
             </div>
