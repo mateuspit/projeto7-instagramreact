@@ -13,6 +13,12 @@ body{
     color: #b5dcff;
 }
 
+.post-user-data img{
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+}
+
 .textPublishButton:hover{
     color: #139EF2;    
 }
