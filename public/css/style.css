@@ -6,6 +6,33 @@ body{
     background-color: #FAFAFA;
 }
 
+.comentariosPosts{
+
+    font-family: 'Roboto', sans-serif;
+}
+
+.postTime{
+    color: #8e8e8e;
+    font-size: 12px;
+}
+
+.seeComments{
+    margin-bottom: 2px;
+    margin-top: 7px;
+    color: #8e8e8e;
+}
+
+.legenda{
+    margin-top: 5px;
+}
+
+.comentariosPosts{
+    margin-left: 15px;
+    margin-right: 17px;    
+}
+
+
+
 :root{
     --borders-gray: #dbdbdb;
     --borders-light-gray: #fafafa;
@@ -363,10 +390,22 @@ span{
     height: auto;
 }
 
+.comentariosPosts span{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.postTime{
+    color: #8e8e8e;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 7px;
+}
+
 .post{
     border: solid 1px var(--borders-gray);
     width: 612px;
-    height: 749px;
+    height: auto;
     margin-top: 24px;
     margin-bottom: 36px;
 }
