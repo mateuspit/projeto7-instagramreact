@@ -1,5 +1,4 @@
 import React from "react"
-import Comentarios from "./Comentarios"
 
 export default function Post(props) {
 
