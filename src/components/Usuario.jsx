@@ -24,14 +24,14 @@ export default function Usuario(){
             
 
     return(
-        <div class="top-side-menu">
-            <div class="top-side-menu-img">
+        <div className="top-side-menu">
+            <div className="top-side-menu-img">
                 <img data-test="profile-image" onClick={chanceUserIcon} src={userIcon} alt="" width="100px"/>
             </div>
-            <div data-test="name" class="top-side-menu-user">
+            <div data-test="name" className="top-side-menu-user">
                 {userName}
             </div>
-            <ion-icon data-test="edit-name" class="chanceUserName" onClick={chanceUserName} name="pencil-outline"></ion-icon>
+            <ion-icon data-test="edit-name" className="chanceUserName" onClick={chanceUserName} name="pencil-outline"></ion-icon>
         </div>
     );
 }

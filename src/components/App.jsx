@@ -3,9 +3,9 @@ import PrincipalContainer from "./PrincipalContainer"
 
 export default function App(){
     return(
-        <div class="site">
+        <div className="site">
             <NavBar/>
-            <div class="top-container-bar"></div>
+            <div className="top-container-bar"></div>
             <PrincipalContainer/>
         </div>
     );

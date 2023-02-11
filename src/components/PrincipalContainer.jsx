@@ -3,7 +3,7 @@ import SideMenu from "./SideMenu"
 
 export default function PrincipalContainer(){
     return(
-        <div class="principal-container">
+        <div className="principal-container">
             <Content />
             <SideMenu />
         </div>

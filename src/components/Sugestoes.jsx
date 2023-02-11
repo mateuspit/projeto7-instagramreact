@@ -31,10 +31,11 @@ const suggestionsStatic = [
 
 export default function Sugestoes(){
     return(
-        <div class="suggestions">
+        <div className="suggestions">
             <TopSuggestions/>
             {suggestionsStatic.map(elementSuggestionsStatic=>(
                 <Sugestao 
+                    key={elementSuggestionsStatic.title}
                     image={elementSuggestionsStatic.image}
                     title={elementSuggestionsStatic.title}
                     followSatus={elementSuggestionsStatic.followSatus}

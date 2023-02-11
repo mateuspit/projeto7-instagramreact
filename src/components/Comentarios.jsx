@@ -4,23 +4,23 @@ export default function Comentarios(props) {
     // console.log(props);
     return (
         
-        <div class="comentariosPosts">
-            <div class="comentarios">
-                <p class="legenda">
+        <div className="comentariosPosts">
+            <div className="comentarios">
+                <p className="legenda">
                     <span>{props.authorPost}</span> {props.subtitle}
                 </p>
-                <p class="seeComments">
+                <p className="seeComments">
                     {props.commentsNumber}
                 </p>
-                <p class="legenda">
+                <p className="legenda">
                     <span>{props.authorComment1}</span> {props.comment1}
                 </p>
-                <p class="legenda">
+                <p className="legenda">
                     <span>{props.authorComment2}</span> {props.comment2}
                 </p>
             </div>
-            <div class="tempo">
-                <p class="postTime">
+            <div className="tempo">
+                <p className="postTime">
                     {props.postTime}
                 </p>
             </div>

@@ -3,7 +3,7 @@ import Posts from "./Posts"
 
 export default function Content(){
     return(
-        <div class="content">
+        <div className="content">
             <Stories/>
             <Posts/>
         </div>        

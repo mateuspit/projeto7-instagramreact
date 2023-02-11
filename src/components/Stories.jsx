@@ -37,10 +37,11 @@ const storiesStatic = [
 
 export default function Stories(){
     return(
-        <div class="stories-container">
+        <div className="stories-container">
 
             {storiesStatic.map(elementoStoriesStatic => (
                 <Story
+                    key={elementoStoriesStatic.title} 
                     image={elementoStoriesStatic.image}
                     title={elementoStoriesStatic.title}                
                 />

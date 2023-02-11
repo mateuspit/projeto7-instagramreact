@@ -90,40 +90,40 @@ export default function Post(props) {
     if (props.photo.includes("mp4")) {
         // console.log("Opa, achei um video mermaum");
         return (
-            // <div data-test="post" class="post">
+            // <div data-test="post" className="post">
             <>
-                <div class="post-header">
-                    <div class="post-user-data">
+                <div className="post-header">
+                    <div className="post-user-data">
                         <img src={props.imageUser} alt="" width="100px" />
                         {props.title}
                     </div>
-                    <div class="post-options">
+                    <div className="post-options">
                         <ion-icon name="ellipsis-horizontal"></ion-icon>
                     </div>
                 </div>
-                <div class="post-photo">
+                <div className="post-photo">
                     <video
                         id="ludoviajante"
                         controls
-                        autoplay
+                        autoPlay
                         muted>
                         <source src={props.photo} type="video/mp4" />
                     </video>
-                    <div class={animationHeart}>
+                    <div className={animationHeart}>
                         <ion-icon name="heart"></ion-icon>
                     </div>
                 </div>
-                <div class="post-buttons">
-                    <div class="post-left-buttons">
-                        <div class={likePostButtonStyle}><ion-icon data-test="like-post" onClick={likePost} name={likePostButtonMode}></ion-icon></div>
+                <div className="post-buttons">
+                    <div className="post-left-buttons">
+                        <div className={likePostButtonStyle}><ion-icon data-test="like-post" onClick={likePost} name={likePostButtonMode}></ion-icon></div>
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
-                    <div class="post-right-button">
+                    <div className="post-right-button">
                         <ion-icon data-test="save-post" onClick={savePost} name={savePostButtonMode}></ion-icon>
                     </div>
                 </div>
-                <div class="post-stats">
+                <div className="post-stats">
                     <img src={props.whoLikeIcon} alt="" width="100px" />
                     <p  >Curtido por <span> {props.whoLikeUser}  </span> e <span data-test="likes-number"> outras {likePostNumber}  pessoas </span></p>
                 </div>
@@ -144,34 +144,34 @@ export default function Post(props) {
     }
     else {
         return (
-            // <div data-test="post" class="post">
+            // <div data-test="post" className="post">
             <>
-                <div class="post-header">
-                    <div class="post-user-data">
+                <div className="post-header">
+                    <div className="post-user-data">
                         <img src={props.imageUser} alt="" width="100px" />
                         {props.title}
                     </div>
-                    <div class="post-options">
+                    <div className="post-options">
                         <ion-icon name="ellipsis-horizontal"></ion-icon>
                     </div>
                 </div>
-                <div class="post-photo">
+                <div className="post-photo">
                     <img data-test="post-image" onDoubleClick={doubleClickLike} src={props.photo} alt="" width="100px" />
-                    <div class={animationHeart}>
+                    <div className={animationHeart}>
                         <ion-icon name="heart"></ion-icon>
                     </div>
                 </div>
-                <div class="post-buttons">
-                    <div class="post-left-buttons">
-                        <div class={likePostButtonStyle}><ion-icon data-test="like-post" onClick={likePost} name={likePostButtonMode}></ion-icon></div>
+                <div className="post-buttons">
+                    <div className="post-left-buttons">
+                        <div className={likePostButtonStyle}><ion-icon data-test="like-post" onClick={likePost} name={likePostButtonMode}></ion-icon></div>
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
-                    <div class="post-right-button">
+                    <div className="post-right-button">
                         <ion-icon data-test="save-post" onClick={savePost} name={savePostButtonMode}></ion-icon>
                     </div>
                 </div>
-                <div class="post-stats">
+                <div className="post-stats">
                     <img src={props.whoLikeIcon} alt="" width="100px" />
                     <p  >Curtido por <span> {props.whoLikeUser}  </span> e <span data-test="likes-number"> outras {likePostNumber}  pessoas </span></p>
                 </div>

@@ -4,8 +4,8 @@ import FooterSideMenu from "./FooterSideMenu"
 
 export default function SideMenu(){
     return(
-        <div class="side-menu-container">
-            <div class="side-menu">
+        <div className="side-menu-container">
+            <div className="side-menu">
                 <Usuario/>
                 <Sugestoes/>
                 <FooterSideMenu/>

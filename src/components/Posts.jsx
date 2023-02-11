@@ -1,5 +1,6 @@
 import Post from "./Post"
 import Comentarios from "./Comentarios"
+import PublishCommentArea from "./PublishCommentArea"
 
 const postsStaticData = [
     {
@@ -56,32 +57,35 @@ const postsStaticData = [
         photo: "./assets/sisifo_feliz.mp4",
         whoLikeIcon: "./assets/adorableanimals 2.png",
         whoLikeUser: "adorable_animals",
-        likes: 99159,
+        likes: 99151,
         authorPost: "barked",
         subtitle: "olha o doguineo!",
         commentsNumber: "Veja todos os 76 comentários",
         authorComment1: "shoptimaooficial",
         comment1: "ídolo demais CÁSSIO, VOCE É GIGANTE 🖤🤍🤩 ",
         authorComment2: "canalpremiere",
-        comment2: "SEMPRE ELE! 🔥 ",
-        postTime: "Há 3 dias"
+        comment2: "SEMPRE ELEEEE! 🔥 ",
+        postTime: "Há 1 semana"
     }
 ]
 
 export default function Posts() {
     return (
-        <div class="posts">
-            {postsStaticData.map(elementoPostStatic => (
-                <div data-test="post" class="post">
+        <div className="posts">
+            {postsStaticData.map((elementoPostStatic,index) => (
+                <div key={elementoPostStatic.likes} data-test="post" className="post">
                     <Post
+                        key={elementoPostStatic.likes}
                         imageUser={elementoPostStatic.imageUser}
                         title={elementoPostStatic.title}
                         photo={elementoPostStatic.photo}
                         whoLikeIcon={elementoPostStatic.whoLikeIcon}
                         whoLikeUser={elementoPostStatic.whoLikeUser}
                         likes={elementoPostStatic.likes}
+                        
                     />
                     <Comentarios
+                        // key={elementoPostStatic.postTime}
                         authorPost={elementoPostStatic.authorPost}
                         subtitle={elementoPostStatic.subtitle}
                         commentsNumber={elementoPostStatic.commentsNumber}
@@ -91,19 +95,9 @@ export default function Posts() {
                         comment2={elementoPostStatic.comment2}
                         postTime={elementoPostStatic.postTime}
                     />
-                    <div class="publicarPosts">
-                        <div class="emojiPublicar">
-                            <ion-icon name="happy-outline"></ion-icon>
-                        </div>
-                        <div class="inputPublicar">
-                            <input type="text" placeholder="Adicione um comentário..." />
-                        </div>
-                        <div class="Button">
-                            <p class="textPublishButton">
-                                Publicar
-                            </p>
-                        </div>
-                    </div>
+                    <PublishCommentArea
+                        // key={elementoPostStatic.comment2}
+                    />
                 </div >
             ))}
         </div>

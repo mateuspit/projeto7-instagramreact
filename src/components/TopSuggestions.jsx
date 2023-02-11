@@ -1,10 +1,10 @@
 export default function TopSuggestions(){
     return(
-        <div class="top-suggestions">
-            <div class="suggestions-4u">
+        <div className="top-suggestions">
+            <div className="suggestions-4u">
                 Sugestões para você
             </div>
-            <div class="see-all-suggestions">
+            <div className="see-all-suggestions">
                 Ver tudo
             </div>
         </div>
