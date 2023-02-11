@@ -2,6 +2,106 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: #FAFAFA;
+}
+
+#malditaSeta{
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    z-index: 2;
+    right: 6px;
+    top: 43px;
+}
+
+.textPublishButton{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    color: #b5dcff;
+}
+
+#ludoviajante{
+    width: 610px;
+    height: 610px;
+}
+
+.post-user-data img{
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+}
+
+.textPublishButton:hover{
+    color: #139EF2;    
+}
+
+.publicarPosts{
+    margin-left: 15px;
+    margin-right: 17px;  
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;   
+    font-family: 'Roboto', sans-serif;
+}
+
+.emojiPublicar{
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+.inputPublicar{
+    margin-right: 10px;
+}
+
+.inputPublicar input{
+    width: 490px;
+}
+
+.input{
+    text-align:left;
+    width:490px;
+}
+
+input{
+    /* color: #979797; */
+    background-color: #FAFAFA;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 400;
+    height: 24px;
+    width: 209px;
+}
+
+.comentariosPosts{
+
+    font-family: 'Roboto', sans-serif;
+}
+
+.postTime{
+    color: #8e8e8e;
+    font-size: 12px;
+}
+
+.seeComments{
+    margin-bottom: 2px;
+    margin-top: 7px;
+    color: #8e8e8e;
+}
+
+.legenda{
+    margin-top: 5px;
+}
+
+.comentariosPosts{
+    margin-left: 15px;
+    margin-right: 17px;    
+}
+
+
+
 :root{
     --borders-gray: #dbdbdb;
     --borders-light-gray: #fafafa;
@@ -318,6 +418,7 @@ span{
     width: 56px;
     margin-right: 17px;
     cursor: pointer;
+    border-radius: 50%;
 }
 
 .top-side-menu{
@@ -359,10 +460,22 @@ span{
     height: auto;
 }
 
+.comentariosPosts span{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.postTime{
+    color: #8e8e8e;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 7px;
+}
+
 .post{
     border: solid 1px var(--borders-gray);
     width: 612px;
-    height: 749px;
+    height: auto;
     margin-top: 24px;
     margin-bottom: 36px;
 }
@@ -377,6 +490,7 @@ span{
     align-items: center;
     padding-left: 18px;
     margin-top: 34px;
+    position: relative;
 }
 
 .story-title{
