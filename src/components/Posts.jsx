@@ -1,6 +1,6 @@
-import Post from "./Post"
-import Comentarios from "./Comentarios"
-import PublishCommentArea from "./PublishCommentArea"
+import Post from "./Post";
+import Comentarios from "./Comentarios";
+import PublishCommentArea from "./PublishCommentArea";
 
 const postsStaticData = [
     {
@@ -72,7 +72,7 @@ const postsStaticData = [
 export default function Posts() {
     return (
         <div className="posts">
-            {postsStaticData.map((elementoPostStatic,index) => (
+            {postsStaticData.map((elementoPostStatic) => (
                 <div key={elementoPostStatic.likes} data-test="post" className="post">
                     <Post
                         key={elementoPostStatic.likes}

@@ -1,11 +1,11 @@
-import Stories from "./Stories"
-import Posts from "./Posts"
+import Stories from "./Stories";
+import Posts from "./Posts";
 
-export default function Content(){
-    return(
+export default function Content() {
+    return (
         <div className="content">
-            <Stories/>
-            <Posts/>
-        </div>        
+            <Stories />
+            <Posts />
+        </div>
     );
 }

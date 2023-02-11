@@ -1,32 +1,32 @@
-import React from "react"
+import React from "react";
 
-export default function Usuario(){
+export default function Usuario() {
 
-    const [userName ,setUserName] = React.useState("catanacomics");
-    const [userIcon ,setUserIcon] = React.useState("./assets/catanacomics 1.png");
+    const [userName, setUserName] = React.useState("catanacomics");
+    const [userIcon, setUserIcon] = React.useState("./assets/catanacomics 1.png");
 
 
-    function chanceUserName(){
+    function chanceUserName() {
         let userNameFunction = prompt("Por favor, insira o nome de usuario");
-        while(userNameFunction === "" || userNameFunction === null || userNameFunction === undefined){
+        while (userNameFunction === "" || userNameFunction === null || userNameFunction === undefined) {
             userNameFunction = prompt("Por favor, insira um nome válido!");
         }
         setUserName(userNameFunction);
     }
 
-    function chanceUserIcon(){
+    function chanceUserIcon() {
         let userIconFunction = prompt("Por favor, insira uma URL de uma imagem");
-        while(userIconFunction === "" || userIconFunction === null || userIconFunction === undefined){
+        while (userIconFunction === "" || userIconFunction === null || userIconFunction === undefined) {
             userIconFunction = prompt("Por favor, insira uma URL valida!");
-        }        
+        }
         setUserIcon(userIconFunction);
-    }    
-            
+    }
 
-    return(
+
+    return (
         <div className="top-side-menu">
             <div className="top-side-menu-img">
-                <img data-test="profile-image" onClick={chanceUserIcon} src={userIcon} alt="" width="100px"/>
+                <img data-test="profile-image" onClick={chanceUserIcon} src={userIcon} alt="" width="100px" />
             </div>
             <div data-test="name" className="top-side-menu-user">
                 {userName}

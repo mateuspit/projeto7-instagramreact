@@ -1,95 +1,50 @@
-import React from "react"
+import React from "react";
 
 export default function Post(props) {
+    const bookmarkOutline = "bookmark-outline";
+    const heartOutline = "heart-outline";
+    const animationClearTime = 1000;
 
-    // const staticCommentsData = [
-    //     {
-    //         authorPost: "meowed",
-    //         subtitle: "É verdade que Einstein era evangélico?",
-    //         commentsNumber: "Veja todos os 1.506 comentários",
-    //         authorComment1: "nabail.azhim",
-    //         comment1: "I see no difference",
-    //         authorComment2: "bennysedana",
-    //         comment2: "Cinderella after eat junk food everyday",
-    //         postTime: "Há 11 horas"
-    //     },
-    //     {
-    //         authorPost: "barked",
-    //         subtitle: "Esse vídeo é muito bom... É preciso imaginar Sísifo feliz!",
-    //         commentsNumber: "Veja todos os 1.900 comentários",
-    //         authorComment1: "shoptimaooficial",
-    //         comment1: "ídolo demais CÁSSIO, VOCE É GIGANTE 🖤🤍🤩",
-    //         authorComment2: "canalpremiere",
-    //         comment2: "SEMPRE ELE! 🔥",
-    //         postTime: "Há 1 dia"
-    //     },
-    //     {
-    //         authorPost: "Socrates",
-    //         subtitle: "Você matou a sua capacidade de pensar num nível que seu cérebro não consegue enxergar a contradição daquilo que sai da sua própria boca.",
-    //         commentsNumber: "Veja todos os 69.666 comentários",
-    //         authorComment1: "gifsgalerahumanas",
-    //         comment1: "Como a filosofia explica o fracasso do webnamoro?",
-    //         authorComment2: "Eu",
-    //         comment2: "Se você leu isso manda '1' para mim no discord: Mateus Barcelos#3884",
-    //         postTime: "Há 2 meses"
-    //     }
-    // ];
-
-    const [savePostButtonMode, setSavePostButtonMode] = React.useState("bookmark-outline");
-    const [likePostButtonMode, setLikePostButtonMode] = React.useState("heart-outline");
+    const [savePostButtonMode, setSavePostButtonMode] = React.useState(bookmarkOutline);
+    const [likePostButtonMode, setLikePostButtonMode] = React.useState(heartOutline);
     const [likePostButtonStyle, setLikePostButtonStyle] = React.useState("likeButtonOutlineHeart");
     let [likePostNumber, setLikePostNumber] = React.useState(props.likes);
-    let [animationHeart, setAnimationHeart] = React.useState("none");
-
-    //animationHeart
-
-    // let savePostMode = "bookmark-outline";
-    // let likePostMode = "heart-outline";
+    const [animationHeart, setAnimationHeart] = React.useState("none");
 
     function savePost() {
-        //<ion-icon name="bookmark"></ion-icon>
-        // alert("post");
-        if (savePostButtonMode === "bookmark-outline") {
+        if (savePostButtonMode === bookmarkOutline) {
             setSavePostButtonMode("bookmark");
+        } else if (savePostButtonMode === "bookmark") {
+            setSavePostButtonMode(bookmarkOutline);
         }
-        else if (savePostButtonMode === "bookmark") {
-            setSavePostButtonMode("bookmark-outline");
-        }
-        // {savePostMode === "bookmark" ? "bookmark-outline" : "bookmark" }
     }
 
     function likePost() {
-        //<ion-icon name="heart"></ion-icon>
-        // alert("coração");
-        if (likePostButtonMode === "heart-outline") {
+        if (likePostButtonMode === heartOutline) {
             setLikePostButtonMode("heart");
             setLikePostButtonStyle("likeButtonFullHeart");
             likePostNumber = props.likes + 1;
             setLikePostNumber(likePostNumber);
-        }
-        else if (likePostButtonMode === "heart") {
-            setLikePostButtonMode("heart-outline");
+        } else if (likePostButtonMode === "heart") {
+            setLikePostButtonMode(heartOutline);
             setLikePostButtonStyle("likeButtonOutlineHeart");
             likePostNumber = props.likes;
             setLikePostNumber(likePostNumber);
         }
-        // {likePostMode === "heart" ? "heart-outline" : "heart" }
     }
 
     function doubleClickLike() {
-        if (likePostButtonMode === "heart-outline") {
+        if (likePostButtonMode === heartOutline) {
             setLikePostButtonMode("heart");
             setLikePostButtonStyle("likeButtonFullHeart");
             likePostNumber = likePostNumber + 1;
             setLikePostNumber(likePostNumber);
         }
         setAnimationHeart("like-heart");
-        setTimeout(() => { setAnimationHeart("none") }, 1000);
+        setTimeout(() => { setAnimationHeart("none") }, animationClearTime);
     }
     if (props.photo.includes("mp4")) {
-        // console.log("Opa, achei um video mermaum");
         return (
-            // <div data-test="post" className="post">
             <>
                 <div className="post-header">
                     <div className="post-user-data">
@@ -126,24 +81,12 @@ export default function Post(props) {
                     <img src={props.whoLikeIcon} alt="" width="100px" />
                     <p  >Curtido por <span> {props.whoLikeUser}  </span> e <span data-test="likes-number"> outras {likePostNumber}  pessoas </span></p>
                 </div>
-                {/* <Comentarios 
-                    authorPost={staticCommentsData[0].authorPost}
-                    subtitle={staticCommentsData[0].subtitle}
-                    commentsNumber={staticCommentsData[0].commentsNumber}
-                    authorComment1={staticCommentsData[0].authorComment1}
-                    comment1={staticCommentsData[0].comment1}
-                    authorComment2={staticCommentsData[0].authorComment2}
-                    comment2={staticCommentsData[0].comment2}
-                    postTime={staticCommentsData[0].postTime}
-                /> */}
 
             </>
 
         );
-    }
-    else {
+    } else {
         return (
-            // <div data-test="post" className="post">
             <>
                 <div className="post-header">
                     <div className="post-user-data">
@@ -174,16 +117,6 @@ export default function Post(props) {
                     <img src={props.whoLikeIcon} alt="" width="100px" />
                     <p  >Curtido por <span> {props.whoLikeUser}  </span> e <span data-test="likes-number"> outras {likePostNumber}  pessoas </span></p>
                 </div>
-                {/* <Comentarios 
-                authorPost={staticCommentsData[0].authorPost}
-                subtitle={staticCommentsData[0].subtitle}
-                commentsNumber={staticCommentsData[0].commentsNumber}
-                authorComment1={staticCommentsData[0].authorComment1}
-                comment1={staticCommentsData[0].comment1}
-                authorComment2={staticCommentsData[0].authorComment2}
-                comment2={staticCommentsData[0].comment2}
-                postTime={staticCommentsData[0].postTime}
-            /> */}
 
             </>
 

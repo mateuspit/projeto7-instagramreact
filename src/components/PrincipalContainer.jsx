@@ -1,5 +1,5 @@
-import Content from "./Content"
-import SideMenu from "./SideMenu"
+import Content from "./Content";
+import SideMenu from "./SideMenu";
 
 export default function PrincipalContainer(){
     return(

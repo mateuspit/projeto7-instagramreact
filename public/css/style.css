@@ -1,12 +1,12 @@
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: #FAFAFA;
 }
 
-#malditaSeta{
+#malditaSeta {
     width: 32px;
     height: 32px;
     position: absolute;
@@ -15,56 +15,52 @@ body{
     top: 43px;
 }
 
-.textPublishButton{
+.textPublishButton {
     font-size: 12px;
     font-weight: 500;
     line-height: 14px;
     color: #b5dcff;
 }
 
-#ludoviajante{
+#ludoviajante {
     width: 610px;
     height: 610px;
 }
 
-.post-user-data img{
-    width: 32px;
-    height: 32px;
-    border-radius: 100%;
+
+
+.textPublishButton:hover {
+    color: #139EF2;
 }
 
-.textPublishButton:hover{
-    color: #139EF2;    
-}
-
-.publicarPosts{
+.publicarPosts {
     margin-left: 15px;
-    margin-right: 17px;  
+    margin-right: 17px;
     display: flex;
     align-items: center;
-    margin-bottom: 10px;   
+    margin-bottom: 10px;
     font-family: 'Roboto', sans-serif;
 }
 
-.emojiPublicar{
+.emojiPublicar {
     font-size: 22px;
     margin-right: 10px;
 }
 
-.inputPublicar{
+.inputPublicar {
     margin-right: 10px;
 }
 
-.inputPublicar input{
+.inputPublicar input {
     width: 490px;
 }
 
-.input{
-    text-align:left;
-    width:490px;
+.input {
+    text-align: left;
+    width: 490px;
 }
 
-input{
+input {
     /* color: #979797; */
     background-color: #FAFAFA;
     border: 1px solid #DBDBDB;
@@ -75,34 +71,35 @@ input{
     width: 209px;
 }
 
-.comentariosPosts{
 
-    font-family: 'Roboto', sans-serif;
-}
 
-.postTime{
+.postTime {
     color: #8e8e8e;
     font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 7px;
 }
 
-.seeComments{
+.seeComments {
     margin-bottom: 2px;
     margin-top: 7px;
     color: #8e8e8e;
 }
 
-.legenda{
+.legenda {
     margin-top: 5px;
 }
 
-.comentariosPosts{
+.comentariosPosts {
     margin-left: 15px;
-    margin-right: 17px;    
+    margin-right: 17px;
+    font-family: 'Roboto', sans-serif;
 }
 
 
 
-:root{
+
+:root {
     --borders-gray: #dbdbdb;
     --borders-light-gray: #fafafa;
     --gray-font: #979797;
@@ -113,7 +110,7 @@ input{
     --black-font: #000000;
 }
 
-.header-container{
+.header-container {
     width: 942px;
     display: flex;
     justify-content: space-between;
@@ -122,19 +119,19 @@ input{
     margin-left: auto;
 }
 
-header{
+header {
     width: 100%;
     height: 54px;
     display: flex;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center;
 }
 
-.logo-icon{
+.logo-icon {
     font-size: 20px;
 }
 
-.story-img img{
+.story-img img {
     width: 56px;
     height: auto;
     border-radius: 50%;
@@ -143,7 +140,7 @@ header{
     align-items: center;
 }
 
-.story-img{
+.story-img {
     height: 66px;
     width: 66px;
     display: flex;
@@ -156,21 +153,21 @@ header{
     /* background-color: aqua; */
 }
 
-.bookmark{
+.bookmark {
     color: white;
 }
 
-.heart-outline{
+.heart-outline {
     color: red;
     cursor: pointer;
 }
 
-.none{
+.none {
     display: none;
 }
 
 
-.like-heart{
+.like-heart {
     position: absolute;
     top: 243px;
     right: 243px;
@@ -182,20 +179,22 @@ header{
 
 @keyframes grow {
     0% {
-      transform: scale(0.5);
-      visibility: visible;
+        transform: scale(0.5);
+        visibility: visible;
     }
+
     37.5% {
-      transform: scale(1.5);
-      opacity: 1;
-      visibility: visible;
+        transform: scale(1.5);
+        opacity: 1;
+        visibility: visible;
     }
-    100%{
+
+    100% {
         transform: scale(1.5);
         opacity: 0;
         visibility: visible;
     }
-  }
+}
 
 
 
@@ -214,21 +213,23 @@ header{
 
 
 
-.chanceUserName, .post-right-button, .likeButton{
+.chanceUserName,
+.post-right-button,
+.likeButton {
     cursor: pointer;
 }
 
-.likeButtonFullHeart{
+.likeButtonFullHeart {
     color: red;
     cursor: pointer;
 }
 
-.likeButtonOutlineHeart{
+.likeButtonOutlineHeart {
     color: black;
     cursor: pointer;
 }
 
-.story{
+.story {
     /* overflow: hidden; */
     display: flex;
     flex-direction: column;
@@ -237,11 +238,11 @@ header{
     margin-right: 14px;
 }
 
-.content{
+.content {
     margin-right: 30px;
 }
 
-.bar{
+.bar {
     height: 22px;
     width: 1px;
     margin-left: 12px;
@@ -249,7 +250,7 @@ header{
     background-color: var(--borders-gray);
 }
 
-header input{
+header input {
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     font-weight: 400;
@@ -262,17 +263,17 @@ header input{
     background-color: var(--borders-light-gray);
 }
 
-.logos{
+.logos {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.post-left-buttons{
+.post-left-buttons {
     display: flex;
 }
 
-.post-header{
+.post-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -280,156 +281,157 @@ header input{
     margin-right: 17px;
 }
 
-.post-user-data{
+.post-user-data {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 500;
-    color: var(--almost-blac-font);   
+    color: var(--almost-blac-font);
     display: flex;
-    align-items: center; 
+    align-items: center;
     margin-top: 15px;
     margin-bottom: 15px;
 }
 
-.post-photo img{
+.post-photo img {
     width: 610px;
     height: 612px;
 }
 
-.post-photo{
+.post-photo {
     position: relative;
 }
 
-.post-left-buttons ion-icon{
+.post-left-buttons ion-icon {
     margin-right: 18px;
 }
 
-.post-stats img{
+.post-stats img {
     width: 20px;
     height: 20px;
     margin-right: 5px;
 }
 
-span{
+span {
     font-weight: 500;
 }
 
-.side-menu-container{
+.side-menu-container {
     width: 300px;
 }
 
-.principal-container{
+.principal-container {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-left: auto;
 }
 
-.side-menu{
+.side-menu {
     position: fixed;
     top: 111px;
     right: auto;
     width: 300px;
 }
 
-.top-side-menu-user{
+.top-side-menu-user {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 500;
-    color: var(--almost-blac-font);   
-    margin-right: 10px; 
+    color: var(--almost-blac-font);
+    margin-right: 10px;
 }
 
-.suggestions-4u{
+.suggestions-4u {
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     font-weight: 500;
-    color: var(--almost-sugg-font);     
+    color: var(--almost-sugg-font);
 }
 
-.suggestion-img img{
+.suggestion-img img {
     width: 32px;
     height: 32px;
     margin-right: 11px;
 }
 
-.suggestion-infos{
+.suggestion-infos {
     display: flex;
 }
 
-.suggestion{
+.suggestion {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 16px;
 }
 
-.suggestion-status{
+.suggestion-status {
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     font-weight: 400;
-    color: var(--almost-sugg-font);  
-    margin-top:6px;   
+    color: var(--almost-sugg-font);
+    margin-top: 6px;
 }
 
-.suggestion-user{
+.suggestion-user {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 500;
-    color: var(--almost-blac-font);     
+    color: var(--almost-blac-font);
 }
 
-.suggestions{
+.suggestions {
     margin-bottom: 33px;
 }
 
-.suggestion-button{
+.suggestion-button {
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     font-weight: 500;
-    color: var(--follow-font);      
+    color: var(--follow-font);
 }
 
-.top-suggestions{
+.top-suggestions {
     display: flex;
     justify-content: space-between;
     margin-bottom: 17px;
 }
 
-.footer-suggestions-menu{
+.footer-suggestions-menu {
     margin-bottom: 18px;
 }
-.footer-side-menu{
+
+.footer-side-menu {
     font-family: 'Roboto', sans-serif;
     font-size: 11px;
     font-weight: 400;
-    color: var(--sugg-footer-font);       
+    color: var(--sugg-footer-font);
 }
 
-.see-all-suggestions{
+.see-all-suggestions {
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     font-weight: 500;
-    color: var(--almost-blac-font); 
+    color: var(--almost-blac-font);
     text-align: right;
 }
 
-.top-side-menu-img img{
+.top-side-menu-img img {
     width: 56px;
     margin-right: 17px;
     cursor: pointer;
     border-radius: 50%;
 }
 
-.top-side-menu{
+.top-side-menu {
     display: flex;
     align-items: center;
     margin-bottom: 24px;
 }
 
 
-.post-stats p{
-    
+.post-stats p {
+
     display: flex;
     align-items: center;
     font-family: 'Roboto', sans-serif;
@@ -438,14 +440,14 @@ span{
     color: var(--black-font);
 }
 
-.post-stats{
+.post-stats {
     display: flex;
     margin-left: 17px;
     margin-bottom: 14px;
     margin-top: 7px;
 }
 
-.post-buttons{
+.post-buttons {
     display: flex;
     justify-content: space-between;
     margin-right: 18px;
@@ -454,25 +456,21 @@ span{
     font-size: 17px;
 }
 
-.post-user-data img{
+.post-user-data img {
     margin-right: 15px;
     width: 32px;
     height: auto;
+    border-radius: 100%;
 }
 
-.comentariosPosts span{
+.comentariosPosts span {
     font-size: 14px;
     font-weight: 500;
 }
 
-.postTime{
-    color: #8e8e8e;
-    font-size: 12px;
-    margin-top: 5px;
-    margin-bottom: 7px;
-}
 
-.post{
+
+.post {
     border: solid 1px var(--borders-gray);
     width: 612px;
     height: auto;
@@ -480,7 +478,7 @@ span{
     margin-bottom: 36px;
 }
 
-.stories-container{
+.stories-container {
     overflow: hidden;
     display: flex;
     width: 614px;
@@ -493,7 +491,7 @@ span{
     position: relative;
 }
 
-.story-title{
+.story-title {
     margin-top: 7px;
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
@@ -505,17 +503,18 @@ span{
     text-overflow: ellipsis;
 }
 
-.top-container-bar{
+.top-container-bar {
     width: 100%;
     height: 1px;
     background-color: var(--borders-gray);
 }
-.logos img{
+
+.logos img {
     width: 103px;
     height: auto;
 }
 
-.top-menu ion-icon{
+.top-menu ion-icon {
     margin-right: 25px;
     font-size: 18px;
 }

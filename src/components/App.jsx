@@ -1,5 +1,5 @@
-import NavBar from "./NavBar"
-import PrincipalContainer from "./PrincipalContainer"
+import NavBar from "./NavBar";
+import PrincipalContainer from "./PrincipalContainer";
 
 export default function App(){
     return(

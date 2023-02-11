@@ -1,9 +1,8 @@
 import React from "react";
 
 export default function Comentarios(props) {
-    // console.log(props);
     return (
-        
+
         <div className="comentariosPosts">
             <div className="comentarios">
                 <p className="legenda">

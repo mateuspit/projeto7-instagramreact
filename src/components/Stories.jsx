@@ -1,4 +1,4 @@
-import Story from "./Story"
+import Story from "./Story";
 
 const storiesStatic = [
     {
@@ -33,7 +33,7 @@ const storiesStatic = [
         image : "./assets/memeriagourmet 1.png",
         title : "memeriagourmet"
     }
-]
+];
 
 export default function Stories(){
     return(
