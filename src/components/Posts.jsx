@@ -53,7 +53,7 @@ const postsStaticData = [
     {
         imageUser: "./assets/barked 2.png",
         title: "barked",
-        photo: "./assets/dog 1.png",
+        photo: "./assets/sisifo_feliz.mp4",
         whoLikeIcon: "./assets/adorableanimals 2.png",
         whoLikeUser: "adorable_animals",
         likes: 99159,
@@ -104,7 +104,6 @@ export default function Posts() {
                             </p>
                         </div>
                     </div>
-
                 </div >
             ))}
         </div>

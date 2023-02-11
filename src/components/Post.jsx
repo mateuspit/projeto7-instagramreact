@@ -1,7 +1,7 @@
 import React from "react"
 import Comentarios from "./Comentarios"
 
-export default function Post(props){
+export default function Post(props) {
 
     // const staticCommentsData = [
     //     {
@@ -47,28 +47,28 @@ export default function Post(props){
     // let savePostMode = "bookmark-outline";
     // let likePostMode = "heart-outline";
 
-    function savePost(){
+    function savePost() {
         //<ion-icon name="bookmark"></ion-icon>
         // alert("post");
-        if(savePostButtonMode === "bookmark-outline"){
+        if (savePostButtonMode === "bookmark-outline") {
             setSavePostButtonMode("bookmark");
         }
-        else if (savePostButtonMode === "bookmark"){
+        else if (savePostButtonMode === "bookmark") {
             setSavePostButtonMode("bookmark-outline");
         }
         // {savePostMode === "bookmark" ? "bookmark-outline" : "bookmark" }
     }
 
-    function likePost(){
+    function likePost() {
         //<ion-icon name="heart"></ion-icon>
         // alert("coração");
-        if(likePostButtonMode === "heart-outline"){
+        if (likePostButtonMode === "heart-outline") {
             setLikePostButtonMode("heart");
             setLikePostButtonStyle("likeButtonFullHeart");
             likePostNumber = props.likes + 1;
             setLikePostNumber(likePostNumber);
         }
-        else if (likePostButtonMode === "heart"){
+        else if (likePostButtonMode === "heart") {
             setLikePostButtonMode("heart-outline");
             setLikePostButtonStyle("likeButtonOutlineHeart");
             likePostNumber = props.likes;
@@ -77,49 +77,105 @@ export default function Post(props){
         // {likePostMode === "heart" ? "heart-outline" : "heart" }
     }
 
-    function doubleClickLike(){
-        if(likePostButtonMode === "heart-outline"){
+    function doubleClickLike() {
+        if (likePostButtonMode === "heart-outline") {
             setLikePostButtonMode("heart");
             setLikePostButtonStyle("likeButtonFullHeart");
             likePostNumber = likePostNumber + 1;
             setLikePostNumber(likePostNumber);
-        }             
+        }
         setAnimationHeart("like-heart");
-        setTimeout(() => {setAnimationHeart("none")}, 1000);
+        setTimeout(() => { setAnimationHeart("none") }, 1000);
     }
-    return(
-        // <div data-test="post" class="post">
-        <>
-            <div class="post-header">
-                <div class="post-user-data">
-                    <img src={props.imageUser} alt="" width="100px"/>
-                    {props.title}
-                </div>  
-                <div class="post-options">
-                    <ion-icon name="ellipsis-horizontal"></ion-icon>                    
-                </div>             
-            </div>
-            <div class="post-photo">
-                <img data-test="post-image" onDoubleClick={doubleClickLike} src={props.photo} alt="" width="100px"/>
-                <div class={animationHeart}>
-                    <ion-icon name="heart"></ion-icon>                                        
+    if (props.photo.includes("mp4")) {
+        // console.log("Opa, achei um video mermaum");
+        return (
+            // <div data-test="post" class="post">
+            <>
+                <div class="post-header">
+                    <div class="post-user-data">
+                        <img src={props.imageUser} alt="" width="100px" />
+                        {props.title}
+                    </div>
+                    <div class="post-options">
+                        <ion-icon name="ellipsis-horizontal"></ion-icon>
+                    </div>
                 </div>
-            </div>
-            <div class="post-buttons">
-                <div class="post-left-buttons">
-                    <div  class={likePostButtonStyle}><ion-icon data-test="like-post" onClick={likePost} name={likePostButtonMode}></ion-icon></div>
-                    <ion-icon name="chatbubble-outline"></ion-icon>
-                    <ion-icon name="paper-plane-outline"></ion-icon>
+                <div class="post-photo">
+                    <video
+                        id="ludoviajante"
+                        controls
+                        autoplay
+                        muted>
+                        <source src={props.photo} type="video/mp4" />
+                    </video>
+                    <div class={animationHeart}>
+                        <ion-icon name="heart"></ion-icon>
+                    </div>
                 </div>
-                <div class="post-right-button">
-                    <ion-icon data-test="save-post" onClick={savePost} name={savePostButtonMode}></ion-icon>                   
+                <div class="post-buttons">
+                    <div class="post-left-buttons">
+                        <div class={likePostButtonStyle}><ion-icon data-test="like-post" onClick={likePost} name={likePostButtonMode}></ion-icon></div>
+                        <ion-icon name="chatbubble-outline"></ion-icon>
+                        <ion-icon name="paper-plane-outline"></ion-icon>
+                    </div>
+                    <div class="post-right-button">
+                        <ion-icon data-test="save-post" onClick={savePost} name={savePostButtonMode}></ion-icon>
+                    </div>
                 </div>
-            </div>
-            <div class="post-stats">
-                <img src={props.whoLikeIcon}  alt="" width="100px"/>
-                <p  >Curtido por <span> {props.whoLikeUser}  </span> e <span data-test="likes-number"> outras {likePostNumber}  pessoas </span></p>           
-            </div>
-            {/* <Comentarios 
+                <div class="post-stats">
+                    <img src={props.whoLikeIcon} alt="" width="100px" />
+                    <p  >Curtido por <span> {props.whoLikeUser}  </span> e <span data-test="likes-number"> outras {likePostNumber}  pessoas </span></p>
+                </div>
+                {/* <Comentarios 
+                    authorPost={staticCommentsData[0].authorPost}
+                    subtitle={staticCommentsData[0].subtitle}
+                    commentsNumber={staticCommentsData[0].commentsNumber}
+                    authorComment1={staticCommentsData[0].authorComment1}
+                    comment1={staticCommentsData[0].comment1}
+                    authorComment2={staticCommentsData[0].authorComment2}
+                    comment2={staticCommentsData[0].comment2}
+                    postTime={staticCommentsData[0].postTime}
+                /> */}
+
+            </>
+
+        );
+    }
+    else {
+        return (
+            // <div data-test="post" class="post">
+            <>
+                <div class="post-header">
+                    <div class="post-user-data">
+                        <img src={props.imageUser} alt="" width="100px" />
+                        {props.title}
+                    </div>
+                    <div class="post-options">
+                        <ion-icon name="ellipsis-horizontal"></ion-icon>
+                    </div>
+                </div>
+                <div class="post-photo">
+                    <img data-test="post-image" onDoubleClick={doubleClickLike} src={props.photo} alt="" width="100px" />
+                    <div class={animationHeart}>
+                        <ion-icon name="heart"></ion-icon>
+                    </div>
+                </div>
+                <div class="post-buttons">
+                    <div class="post-left-buttons">
+                        <div class={likePostButtonStyle}><ion-icon data-test="like-post" onClick={likePost} name={likePostButtonMode}></ion-icon></div>
+                        <ion-icon name="chatbubble-outline"></ion-icon>
+                        <ion-icon name="paper-plane-outline"></ion-icon>
+                    </div>
+                    <div class="post-right-button">
+                        <ion-icon data-test="save-post" onClick={savePost} name={savePostButtonMode}></ion-icon>
+                    </div>
+                </div>
+                <div class="post-stats">
+                    <img src={props.whoLikeIcon} alt="" width="100px" />
+                    <p  >Curtido por <span> {props.whoLikeUser}  </span> e <span data-test="likes-number"> outras {likePostNumber}  pessoas </span></p>
+                </div>
+                {/* <Comentarios 
                 authorPost={staticCommentsData[0].authorPost}
                 subtitle={staticCommentsData[0].subtitle}
                 commentsNumber={staticCommentsData[0].commentsNumber}
@@ -129,9 +185,10 @@ export default function Post(props){
                 comment2={staticCommentsData[0].comment2}
                 postTime={staticCommentsData[0].postTime}
             /> */}
-            
-        </>
-        
-    );
-    
+
+            </>
+
+        );
+    }
+
 }
