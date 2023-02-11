@@ -38,7 +38,7 @@ const storiesStatic = [
 export default function Stories(){
     return(
         <div className="stories-container">
-
+            <img id="malditaSeta"src="./assets/chevron-forward-circle 1.png"></img>
             {storiesStatic.map(elementoStoriesStatic => (
                 <Story
                     key={elementoStoriesStatic.title} 

@@ -6,6 +6,15 @@ body{
     background-color: #FAFAFA;
 }
 
+#malditaSeta{
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    z-index: 2;
+    right: 6px;
+    top: 43px;
+}
+
 .textPublishButton{
     font-size: 12px;
     font-weight: 500;
@@ -409,6 +418,7 @@ span{
     width: 56px;
     margin-right: 17px;
     cursor: pointer;
+    border-radius: 50%;
 }
 
 .top-side-menu{
@@ -480,6 +490,7 @@ span{
     align-items: center;
     padding-left: 18px;
     margin-top: 34px;
+    position: relative;
 }
 
 .story-title{
