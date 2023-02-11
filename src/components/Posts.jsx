@@ -75,8 +75,22 @@ export default function Posts() {
                         comment2={elementoPostStatic.comment2}
                         postTime={elementoPostStatic.postTime}
                     />
-                    </div >
-                ))}
-                </div>
-            );
+                    <div class="publicarPosts">
+                        <div class="emojiPublicar">
+                            <ion-icon name="happy-outline"></ion-icon>
+                        </div>
+                        <div class="inputPublicar">
+                            <input type="text" placeholder="Adicione um comentário..." />
+                        </div>
+                        <div class="Button">
+                            <p class="textPublishButton">
+                                Publicar
+                            </p>
+                        </div>
+                    </div>
+
+                </div >
+            ))}
+        </div>
+    );
 }

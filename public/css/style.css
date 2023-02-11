@@ -6,6 +6,55 @@ body{
     background-color: #FAFAFA;
 }
 
+.textPublishButton{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    color: #b5dcff;
+}
+
+.textPublishButton:hover{
+    color: #139EF2;    
+}
+
+.publicarPosts{
+    margin-left: 15px;
+    margin-right: 17px;  
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;   
+    font-family: 'Roboto', sans-serif;
+}
+
+.emojiPublicar{
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+.inputPublicar{
+    margin-right: 10px;
+}
+
+.inputPublicar input{
+    width: 490px;
+}
+
+.input{
+    text-align:left;
+    width:490px;
+}
+
+input{
+    /* color: #979797; */
+    background-color: #FAFAFA;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 400;
+    height: 24px;
+    width: 209px;
+}
+
 .comentariosPosts{
 
     font-family: 'Roboto', sans-serif;
