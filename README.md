@@ -3,14 +3,18 @@
 Acesse o projeto: <a href="https://mateuspit.github.io/projeto7-instagramreact/"> Instagram react </a>
 
 Acesse informações sobre o projeto:
-Contextualização
-Requisitos do projeto
-Tecnologias utilizadas
+<div align="center"><a href="#Contextualizacao">Contextualização</a><br>
+  <a href="#Tecnologias">Tecnologias utilizadas<br></a>
+<a href="#Requisitos">Requisitos do projeto<br></a></div>
 
-Introdução:
-blablabla
 
-Requisitos do projeto:
+<div id="Contextualizacao">Contextualização:</div><br>
+Este projeto foi desenvolvido para trabalhar os conceitos aprendidos sobre React mais especificamente: conceito de componentização, as props dos componentes do React e, por fim, estado do componente utilizando useState. Este é o primeiro projeto de React, portanto, tem baixa complexidade.
+
+<div id="Tecnologias">Tecnologias utilizadas:</div><br>
+Neste projeto foram utilizados HTML, CSS, JavaScript e React. Todo o projeto foi versionado utilizando git e github. O projeto foi codificado utilizando o editor de texto, VS Code.
+
+<div id="Requisitos">Requisitos do projeto:</div>
 - Você deve criar seu projeto usando o comando create-react-app:
 - Arquivos CSS devem ser colocados na pasta public e linkados diretamente no index.html da pasta public.
 - Você também deve criar, dentro da `public`, uma pasta `assets` para colocar as imagens.
@@ -27,7 +31,7 @@ Requisitos do projeto:
   - Stories<br>
   - Posts<br>
   - Sugestoes<br>
-  <img title="a title" alt="Alt text" src="./public/assets/DistribuicaoDosComponentes.png">
+  <div align="center"><img title="a title" alt="Alt text" src="./public/assets/DistribuicaoDosComponentes.png"></div>
    </details>
 - Todos os itens repetitivos do projeto devem ser representados como Arrays/Objetos nos componentes e renderizados no JSX usando
   <details>
@@ -54,7 +58,7 @@ Bônus (OPCIONAL)
 - Para dar like clicando na imagem, é necessário clicar duas vezes seguidas, rapidamente.<br>
   - Clicar duas vezes com um intervalo de tempo grande NÃO CONFIGURA double click. Só serão aceitas implementações usando onDoubleClick do React ou evento nativo equivalente.<br>
 - Quando ocorrer o double click na imagem, deverá surgir no centro da imagem um coração, que primeiro cresce e depois desaparece, como na imagem abaixo.<br>
-<img title="a title" alt="Alt text" src="./public/assets/heart.gif">
+<div align="center"><img title="a title" alt="Alt text" src="./public/assets/heart.gif"></div>
   </details>
 
   
