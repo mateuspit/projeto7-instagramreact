@@ -1,3 +1,8 @@
+<div align="center">
+<img title="a title" alt="Alt text" src="./public/assets/ezgif-4-aa22203c13.gif">
+</div>
+
+
 # Informações sobre o projeto!
 
 ### Acesse o projeto: <a href="https://mateuspit.github.io/projeto7-instagramreact/"> 🔗 Instagram react </a>
