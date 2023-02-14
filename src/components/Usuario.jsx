@@ -31,7 +31,7 @@ export default function Usuario() {
             <div data-test="name" className="top-side-menu-user">
                 {userName}
             </div>
-            <ion-icon data-test="edit-name" className="chanceUserName" onClick={chanceUserName} name="pencil-outline"></ion-icon>
+            <ion-icon data-test="edit-name" class="chanceUserName" onClick={chanceUserName} name="pencil-outline"></ion-icon>
         </div>
     );
 }
